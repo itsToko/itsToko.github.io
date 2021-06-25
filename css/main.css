@@ -1,0 +1,123 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.header__title {
+    display: flex;
+    justify-content: center;
+    color: white;
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+header {
+    background-color: darkcyan;
+    position: relative;
+    padding: 2em 0;
+}
+
+.check-visible {
+    display: none;
+}
+
+.nav {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background-color: darkcyan;
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: transform 250ms ease-in-out 100ms;
+}
+
+.nav ul {
+    list-style: none;
+}
+
+.nav li {
+    padding: 0.5em;
+    position: relative;
+    left: -100%;
+    opacity: 0;
+    transition: left 300ms linear 250ms;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: white;
+    opacity: 0;
+    transition: opacity 250ms linear 250ms;
+}
+
+#nav-toggle:checked ~ nav {
+    transform: scale(1,1);
+}
+
+#nav-toggle:checked ~ nav li {
+    left: 0;
+    text-align: center;
+    opacity: 1;
+}
+
+#nav-toggle:checked ~ nav a {
+    opacity: 0.8;
+}
+
+.nav-label {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top:0;
+    right:0;
+    height: 100%;
+    padding: 0 0.5em;
+}
+
+.nav-label span,
+.nav-label span::before,
+.nav-label span::after {
+    background: white;
+    opacity: 0.8;
+    width: 1.5em;
+    height: 2px;
+    display: block;
+    position: relative;
+}
+
+.nav-label span::before,
+.nav-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-label span::before {
+    bottom: 8px;
+}
+
+.nav-label span::after {   
+    top: 8px;
+}
+
+
+
+
+
+
+main {
+    background-color: darkslategray;
+    padding: 3em;
+    text-align: center;
+    width: 100%;
+    
+}
+
+footer {
+    background-color:lightskyblue;
+    padding: 3em;
+    text-align: center;
+    margin-left: 250px;
+}
