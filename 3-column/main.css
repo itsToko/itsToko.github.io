@@ -132,8 +132,27 @@ p {
     text-decoration: none;
 }
 
+.nav__btn {
+    background-color: var(--clr-primary-20);
+    padding: 0.75em 2em;
+    position: absolute;
+    left: 1em;
+    top: 1em;
+    border-radius: 200px;
+    border: 3px solid var(--clr-primary-20);
+    color: var(--clr-neutral-95);
+    text-decoration: none;
+    transition: background 250ms, color 250ms, transform 250ms;
+}
+
 .btn:hover {
     background-color: transparent;
+}
+
+.nav__btn:hover {
+    transform: scale(0.9);
+    background: transparent;
+    color: var(--clr-primary-20);    
 }
 
 .col:nth-child(1) {
