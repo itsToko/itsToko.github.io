@@ -12,7 +12,7 @@
     --ff-primary: "Lexend Deca", sans-serif;
     --ff-accent: "Big Shoulders Display", serif;
 
-    --fw-primary: 600;
+    --fw-primary: 400;
     --fw-accent: 700;
 
     --fs-primary: 15px;
@@ -36,6 +36,7 @@ h1 {
     font-family: var(--ff-accent);
     font-weight: var(--fw-accent);
     font-size: 2.5rem;
+    text-transform: uppercase;
 }
 
 p {
@@ -148,7 +149,7 @@ p {
     }
 
     p {
-        margin-bottom: 5em;
+        margin-bottom: 3em;
     }
 
     .col:nth-child(1) {
