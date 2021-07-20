@@ -11,27 +11,27 @@
 </head>
 <body>
 
-    <header id="myHeader" class="header">
-        <div class="nav-container nav-bar">
-            <a href="index.php" class="logo">Logo</a>
-            <nav class="nav">
-                <ul>
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+    <header id="home" class="header">
+        <div class="color_overlay">
+            <div class="nav-container nav-bar">
+                <a href="index.html" class="logo">Ad-Print</a>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
     <side>
     <nav class="side_nav">
                 <ul>
-                    <li><a href="index.php">Home</a></li>
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#products">Products</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
     </side>
@@ -152,18 +152,18 @@
             </div>
         </section> -->
 
+        <footer class="footer">
+            <p>&copy 2021 Ad-Print Ltd</p>
+        </footer>
         <script>
-            const header = document.querySelector('.header');
-            const side_nav = document.querySelector('.side_nav');
+            const header = document.querySelector('.header');       // what we are watching for coming on and off viewport
+            const side_nav = document.querySelector('.side_nav');   // what we want to change styling for when header is on or off screen
 
             const navOptions = {
+                rootMargin: "-150px"
             };
 
-            const navObserver = new IntersectionObserver
-            (function(
-                entries,
-                sideNavObserver
-            ) {
+            const navObserver = new IntersectionObserver(function(entries,navObserver) {
                 entries.forEach(entry => {
                     console.log(entry.target);
                     if(!entry.isIntersecting) {
