@@ -49,6 +49,15 @@ body {
     text-align: center;
 }
 
+.nav-row {
+    display: flex;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+}
+
 
 .header {
     height: 100vh;
@@ -68,6 +77,61 @@ body {
 .logo {
     text-decoration: none;
 }
+
+/* Flex style */
+
+.nav-bar {
+
+}
+
+.nav-bar .logo {
+    font-size: 4rem;
+    margin-bottom: 1em;
+    font-weight: 700;
+    color: var(--clr-primary-200);
+    text-transform: uppercase;
+    transition: transform 150ms ease-in 50ms;
+}
+
+.nav ul {
+    list-style: none;
+}
+
+.nav li {
+    display: inline-block;
+    transition: transform 150ms ease-in 50ms;
+}
+
+.nav li + li {
+    margin-left: 1em;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--clr-primary-200);
+    font-size: 1.3125rem;
+    filter: brightness(0.7);
+    transition: filter 150ms ease-in 50ms;
+}
+
+.nav-bar .logo:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.nav li:hover {
+    transform: scale(1.2);
+}
+
+.nav a:hover {
+    transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    filter: brightness(1);
+} 
+
+
+/* 
+    Grid style
 
 .nav-bar {
     display: grid;
@@ -125,7 +189,7 @@ body {
     transform: scale(1.2);
     -moz-transform: scale(1.2);
     filter: brightness(1);
-}
+} */
 
 /* ----- Side Navigation ----- */
 
