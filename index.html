@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="style/main.css">
 
-    <title>Ad-Print Ltd</title>
+    <title>Ad-Print</title>
 </head>
 <body>
 
@@ -31,33 +31,22 @@
         </div>
     </header>
 
-    <!-- <header id="home" class="header">
-        <div class="color_overlay">
-            <div class="nav-container nav-bar">
-                <a href="index.html" class="logo">Ad-Print</a>
-                <nav class="nav">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#products">Products</a></li>
-                        <li><a href="#about">About</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header> -->
-
     <side>
-    <nav class="side_nav">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#about">About</a></li>
-                    <!-- <li><a href="#contact">Contact</a></li> -->
-                </ul>
-            </nav>
+        <input type="checkbox" id="show_side" class="visible">
+        <label for="show_side" class="show_side_label">
+                <span class="color"></span>
+        </label>
+        <nav class="side_nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <!-- <li><a href="#contact">Contact</a></li> -->
+            </ul>
+        </nav>
     </side>
 
-    <main id="products">
+    <main id="products" class="products">
         <div class="container">
             <div class="grid">
                 <div class="grid-item"><img src="https://picsum.photos/id/237/400/400" alt="rand img"></div>
@@ -176,22 +165,29 @@
         <footer class="footer">
             <p>&copy 2021 Ad-Print Ltd</p>
         </footer>
-        
         <script>
-            const header = document.querySelector('.header');       // what we are watching for coming on and off viewport
-            const side_nav = document.querySelector('.side_nav');   // what we want to change styling for when header is on or off screen
+            const header = document.querySelector('.header');                   // what we are watching for coming on and off viewport
+            const prod_sec = document.querySelector('.products');               //
+            const side_nav = document.querySelector('.side_nav');               //  
+            const side_label = document.querySelector('.show_side_label');      // what we want to change styling for when header is on or off screen
 
             const navOptions = {
-                rootMargin: "-150px"
+                rootMargin: "-150px 0px 0px 0px"
+            };
+
+            const prodOptions = {
+                rootMargin: "150px"
             };
 
             const navObserver = new IntersectionObserver(function(entries,navObserver) {
                 entries.forEach(entry => {
                     console.log(entry.target);
                     if(!entry.isIntersecting) {
+                        side_label.classList.add("nav-scrolled");
                         side_nav.classList.add("nav-scrolled");
                     } else {
-                        side_nav.classList.remove("nav-scrolled")
+                        side_label.classList.remove("nav-scrolled");
+                        side_nav.classList.remove("nav-scrolled");
                     }
                 });
             },

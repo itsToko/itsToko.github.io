@@ -63,6 +63,8 @@ body {
     height: 100vh;
     position: relative;
     background-image: url('https://img1.wsimg.com/isteam/stock/21616/:/rs=w:1920,m');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .footer {
@@ -80,9 +82,9 @@ body {
 
 /* Flex style */
 
-.nav-bar {
+/* .nav-bar {
 
-}
+} */
 
 .nav-bar .logo {
     font-size: 4rem;
@@ -205,8 +207,10 @@ body {
     justify-content: center;
     text-align: center;
     transform: scale(0,1);
+	opacity: 0;		   
     transform-origin: left;
     transition: transform 250ms, opacity 250ms ease-in-out 50ms;
+	z-index: -1;			
 }
 
 .side_nav ul {
@@ -231,7 +235,7 @@ body {
     font-size: 1.3125rem;
     filter: brightness(0.7);
     transition: filter 150ms, opacity 500ms, color 150ms ease-in-out 50ms;
-    opacity: 0;
+    opacity: 1;
 }
 
 .side_nav a:hover {
@@ -239,10 +243,67 @@ body {
     color: var(--clr-primary-400);
 }
 
+/* Side Nav Toggle styling */
+
+.visible {
+    display: none;
+}
+
+.show_side_label {
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 1em;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#show_side:checked ~ .side_nav{
+    transform: scale(1,1);
+}
+
+ .show_side_label span {
+    position: relative;
+}
+
+.show_side_label span,
+.show_side_label span::before,
+.show_side_label span::after {
+    content: "";
+    display: block;
+    width: 2rem;
+    height: 3px;
+    background-color: var(--clr-primary-100);
+}
+
+.show_side_label span::before,
+.show_side_label span::after {
+    position: absolute;
+}
+
+.show_side_label span::before {
+    top: -10px;
+}
+
+.show_side_label span::after {
+    bottom: -10px;
+}
+
+.show_side_label:hover {
+    cursor: pointer;
+}
+
+
+
 /* ----- Scrolled Styling for side nav to appear ----- */
 
 .nav-scrolled {
-    transform: scale(1,1);
+    opacity: 1;
+    z-index: 1;
 }
 
 .nav-scrolled a {
