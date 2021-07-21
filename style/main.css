@@ -65,6 +65,7 @@ body {
     background-image: url('https://img1.wsimg.com/isteam/stock/21616/:/rs=w:1920,m');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 .footer {
@@ -196,8 +197,8 @@ body {
 /* ----- Side Navigation ----- */
 
 .side_nav {
-    background-color: var(--clr-primary-100);
-    width: 15vw;
+    background-color: hsla(214,35%,37%,0.95);
+    width: 50vw;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -325,19 +326,33 @@ body {
 main {
     height: 100vh;
     overflow-y: auto;
+    padding-top: 3em;
+    padding-bottom: 1.75em;
 }
 
 .grid {
-    margin: 3em 0;
-    display: grid;
-    grid-template-columns: repeat(3,auto);
-    gap: 3em;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .grid-item {
     text-align: center;
+    margin-bottom: 1.25em;
+    overflow: hidden;
+    border-radius: 30px;
 }
+
+.grid-img {
+    transition: transform 150ms ease-in 25ms;
+    
+}
+
+.grid-img:hover {
+    transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    cursor: pointer;
+}
+
 
 /* ----- About Section ----- */
 
@@ -416,7 +431,30 @@ main {
     font-size: 1.125rem;
 }
 
+@media (max-width: 450px) {
+    .grid-item img {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
 @media (min-width:680px) {  
+    .side_nav {
+        width: 350px;
+    }
+    .grid {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    /* .grid {
+        margin: 3em 0;
+        display: grid;
+        grid-template-columns: repeat(3,auto);
+        gap: 3em;
+        overflow: hidden;
+    }     */
 
     .form__row {
         display: flex;
