@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('images/');
 
 :root {
     --clr-primary-100: hsl(214,35%,37%);
@@ -304,7 +305,7 @@ body {
 
 .nav-scrolled {
     opacity: 1;
-    z-index: 1;
+    z-index: 5;
 }
 
 .nav-scrolled a {
@@ -330,6 +331,12 @@ main {
     padding-bottom: 1.75em;
 }
 
+.title {
+    font-size: 4em;
+    margin-bottom: 1.5em;
+    text-align: center;
+}
+
 .grid {
     display: flex;
     flex-direction: column;
@@ -340,11 +347,37 @@ main {
     margin-bottom: 1.25em;
     overflow: hidden;
     border-radius: 30px;
+    width: 30%;
+    height: 18vw;
+    box-shadow: 5px 5px 5px black;
+    
 }
 
 .grid-img {
+    z-index: 2;
     transition: transform 150ms ease-in 25ms;
-    
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-primary-300);
+    font-size: 2rem;
+    text-shadow: 2px 2px 5px black;   
+    position: relative; 
+}
+
+.grid-img::before {
+    z-index: -1;
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftotallybranded.co.uk%2Fwp-content%2Fuploads%2F2019%2F04%2FUntitled-design-42.png&f=1&nofb=1');
+    background-position: center;
+    background-size: cover;
+    filter: brightness(0.2)
 }
 
 .grid-img:hover {
@@ -365,11 +398,6 @@ main {
 
 .about .row {
     padding: 6em 0;
-}
-
-.about h1 {
-    margin-bottom: 1.5em;
-    font-size: 4rem;
 }
 
 .about .col {

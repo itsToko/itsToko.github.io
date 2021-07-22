@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="style/main.css">
 
     <title>Ad-Print</title>
+
+    <script>
+        function fun() {
+                alert("Demo site, message not sent");
+            }
+    </script>
 </head>
 <body>
 
@@ -48,21 +54,32 @@
 
     <main id="products" class="products">
         <div class="container">
+            <h1 class="title">Products</h1>
             <div class="grid">
                 <div class="grid-item">
-                    <img class="grid-img" src="images/placeholder_1.jpg" alt="rand img">
+                    <div class="grid-img">
+                        <h3>Samples coming soon</h3>
+                    </div>
                 </div>
                 <div class="grid-item">
-                    <img class="grid-img" src="images/placeholder_2.jpg" alt="rand img">
+                    <div class="grid-img">
+                        <h3>Samples coming soon</h3>
+                    </div>
                 </div>
                 <div class="grid-item">
-                    <img class="grid-img" src="images/placeholder_3.jpg" alt="rand img">
+                    <div class="grid-img">
+                        <h3>Samples coming soon</h3>
+                    </div>
                 </div>
                 <div class="grid-item">
-                    <img class="grid-img" src="images/placeholder_1.jpg" alt="rand img">
+                    <div class="grid-img">
+                        <h3>Samples coming soon</h3>
+                    </div>
                 </div>
                 <div class="grid-item">
-                    <img class="grid-img" src="images/placeholder_2.jpg" alt="rand img">
+                    <div class="grid-img">
+                        <h3>Samples coming soon</h3>
+                    </div>
                 </div>
             </div>
         </div>
@@ -71,7 +88,7 @@
     <section id="about" class="about">
         <div class="container">
             <div class="row">
-                <h1>About Us</h1>
+                <h1 class="title">About Us</h1>
                 <div class="col">
                     <h2>Quality Service</h2>
                     <p>For full colour printing on, Coasters, Paper Bags, Paper Bags with Handles, Wood Coasters, Boxes Jiffy Bags and more</p>
@@ -174,7 +191,7 @@
                     </div>
                     <textarea class="form__item form__message" name="cf_message" cols="45" rows="6" id="cf_message" value="" placeholder="Message*" class="cf_text"></textarea>
                     <div class="form__row">
-                      <button class="form__item form__submit" type="" name="">Send Message</button>
+                      <button onclick="fun();" class="form__item form__submit" type="button" name="">Send Message</button>
                     </div>
                 </form>
               </div>
@@ -182,7 +199,7 @@
         </section>
 
         <footer class="footer">
-            <p>&copy 2021 Ad-Print Ltd</p>
+            <p><!-- &copy 2021 Ad-Print Ltd --> Demo Site</p>
         </footer>
         <script>
             const header = document.querySelector('.header');                   // what we are watching for coming on and off viewport
