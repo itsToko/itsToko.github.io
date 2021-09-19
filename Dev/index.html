@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./style/main.css">
+
+    <title>Dan's Web Portfolio</title>
+
+    <script>
+        function socialalert() {
+            alert("Not currently linked");
+        }
+
+        function contactalert() {
+            alert("Not currently contactable, my apologies");
+        }
+    </script>
+</head>
+<body>
+    
+    <main class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <img src="https://picsum.photos/id/1/150/150" alt="profile pic">
+                    <div class="name">
+                        <h2 class="title">Daniel Husbands</h2>
+                        <small>Web Developer</small>
+                    </div>
+                    <div class="social_links">
+                        <h3 class="title">Social links</h3>
+                        <a onclick="socialalert()" href="#">Twitter</a>
+                        <a onclick="socialalert()" href="#">GitHub</a>
+                    </div>
+                    <div class="info">
+                        <h3 class="info__location_title title">Located in</h3>
+                        <p class="info_location">England</p>
+                    </div>
+                    <div class="email_btn">
+                        <a onclick="contactalert()" href="#">Contact</a>
+                    </div>
+                </div>
+                <div class="col">
+
+                    <div class="about__title">
+                        <h2 class="title">About me</h2>
+                        <p>I'm a 22 year old self taught web developer, mainly HTML and CSS at the moment. I am constantly learning new skills and programming languages to use towards website devolpment.</p>
+                    </div>
+
+                    <div class="col__about">
+                        <div class="col__item">
+                            <h3  class="title">Wev Developer</h3>
+                            <p>Able to create beautiful web pages using HTML and CSS.</p>
+                        </div>
+                        <div class="col__item">
+                            <h3  class="title">Currently Learning</h3>
+                            <ul>
+                                <li>JavaScript</li>
+                                <li>PHP</li>
+                            </ul>
+                        </div>
+                        <div class="col__item">
+                            <h3  class="title">Responsive Designs</h3>
+                            <p>Your web pages are created to work on multiple browsers and screen sizes.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>
