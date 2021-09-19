@@ -5,233 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="./style/main.css">
 
-    <title>Ad-Print</title>
+    <title>Dan's Web Portfolio</title>
 
     <script>
-        function fun() {
-                alert("Demo site, message not sent");
-            }
+        function socialalert() {
+            alert("Not currently linked");
+        }
     </script>
 </head>
 <body>
-
-    <header id="home" class="header">
-        <div class="color_overlay">
-            <div class="nav-container nav-bar">
-                <div class="nav-row">
-                    <a href="index.html" class="logo">Ad-Print</a>
-                </div>
-                <div class="nav-row">
-                    <nav class="nav">
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="#products">Products</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <side>
-        <input type="checkbox" id="show_side" class="visible">
-        <label for="show_side" class="show_side_label">
-                <span class="color"></span>
-        </label>
-        <nav class="side_nav">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </side>
-
-    <main id="products" class="products">
+    
+    <main class="main">
         <div class="container">
-            <h1 class="title">Products</h1>
-            <div class="grid">
-                <div class="grid-item">
-                    <div class="grid-img">
-                        <h3>Samples coming soon</h3>
+            <div class="row">
+                <div class="col">
+                    <img src="https://picsum.photos/id/1/150/150" alt="profile pic">
+                    <div class="name">
+                        <h2 class="title">Daniel Husbands</h2>
+                        <small>Web Developer</small>
+                    </div>
+                    <div class="social_links">
+                        <h3 class="title">Social links</h3>
+                        <a onclick="socialalert()" href="#">Twitter</a>
+                        <a onclick="socialalert()" href="#">GitHub</a>
+                    </div>
+                    <div class="info">
+                        <h3 class="info__location_title title">Located in</h3>
+                        <p class="info_location">Northampton, England</p>
+                    </div>
+                    <div class="email_btn">
+                        <a onclick="contactalert()" href="#">Contact</a>
                     </div>
                 </div>
-                <div class="grid-item">
-                    <div class="grid-img">
-                        <h3>Samples coming soon</h3>
+                <div class="col">
+
+                    <div class="about__title">
+                        <h2 class="title">About me</h2>
+                        <p>I'm a 22 year old self taught web developer, mainly HTML and CSS at the moment. I am constantly learning new skills and programming languages to use towards website devolpment in order to make my projects more aesthetically pleasing.</p>
                     </div>
-                </div>
-                <div class="grid-item">
-                    <div class="grid-img">
-                        <h3>Samples coming soon</h3>
+
+                    <div class="col__about">
+                        <div class="col__item">
+                            <h3  class="title">Wev Developer</h3>
+                            <p>Able to create beautiful web pages using HTML and CSS.</p>
+                        </div>
+                        <div class="col__item">
+                            <h3  class="title">Currently Learning</h3>
+                            <ul>
+                                <li>JavaScript</li>
+                                <li>PHP</li>
+                            </ul>
+                        </div>
+                        <div class="col__item">
+                            <h3  class="title">Responsive Designs</h3>
+                            <p>Your web pages are created to work on multiple browsers and screen sizes.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="grid-item">
-                    <div class="grid-img">
-                        <h3>Samples coming soon</h3>
-                    </div>
-                </div>
-                <div class="grid-item">
-                    <div class="grid-img">
-                        <h3>Samples coming soon</h3>
-                    </div>
+
                 </div>
             </div>
         </div>
     </main>
-
-    <section id="about" class="about">
-        <div class="container">
-            <div class="row">
-                <h1 class="title">About Us</h1>
-                <div class="col">
-                    <h2>Quality Service</h2>
-                    <p>For full colour printing on, Coasters, Paper Bags, Paper Bags with Handles, Wood Coasters, Boxes Jiffy Bags and more</p>
-                </div>
-                <div class="col">
-                    <h2>Custom & High volume jobs</h2>
-                    <p>We provide 1 off, batches or full variable data printing at over 3,600 per hour</p>
-                </div>
-                <div class="col">
-                    <h2>Local business</h2>
-                    <p>Your local solution or national supplier with quick turn round</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- <?php if(isset($_POST['cf_submit'])) {    
-        $errors = array();
-        $success = null;
-        
-        $required_fields['cf_name'] = 'You are required to enter your Name.';
-        $required_fields['cf_email'] = 'You are required to enter your E-mail Address.';
-        $required_fields['cf_subject'] = 'You are required to enter a Subject.';
-        $required_fields['cf_message'] = 'You are required to enter a Message.';
-                        
-        foreach($_POST as $key => $value) {
-            if(array_key_exists($key, $required_fields)) {
-              if(trim($_POST[$key]) === '') {
-                  $errors[$key] = $required_fields[$key];
-                }
-            }
-          }
     
-          if(empty($errors)) {
-              $to = "sales@digitalprintltd.com";                 // change this to desired receiving email address
-              $subject = $_POST['cf_subject'];
-              $name_field = $_POST['cf_name'];
-              $email_field = $_POST['cf_email'];
-              $message = $_POST['cf_message'];
-              $company = $_POST['cf_company'];
-              
-              $body = "From: $name_field\n Company: $company\n E-Mail: $email_field\n Message:\n $message";
-              $success = mail($to, $subject, $body);
-          }
-          
-          if($success) {
-                    echo "<p><strong>Thank you for getting in touch. Expect to hear back from us soon.</strong></p>";
-              } else {
-                    echo "<strong>Error sending email! </strong>";
-              }
-          }
-    
-          if(!empty($errors)) {
-              echo "<strong>Please check the following errors:</strong><br/><br/>";
-              echo "<ul>";
-              foreach($errors as $value) {         
-                    echo "<li>$value</li>";      
-              }
-              echo "</ul>";
-          } ?>
-    
-          <section id="contact" class="main_form">
-            <div class="container">
-              <div class="main_form_bg">
-                <div>
-                  <h1 class="form__title">Contact Us</h1>
-                </div>
-                <form action="" method="post">
-                    <div class="form__row">
-                      <input class="form__item form__name" name="cf_name" type="text" id="cf_name" class="cf_input" value="<?php if(isset($_POST['cf_name'])) echo $_POST['cf_name'];?>" placeholder="Name*">
-                      <input class="form__item form__email" name="cf_email" type="email" id="cf_email" class="cf_input" value="<?php if(isset($_POST['cf_email'])) echo $_POST['cf_email'];?>" placeholder="Email*">
-                    </div>
-                    <div class="form__row">
-                      <input class="form__item form__company" name="cf_company" type="text" id="cf_company" class="cf_input" value="<?php if(isset($_POST['cf_company'])) echo $_POST['cf_company'];?>" placeholder="Company*">
-                      <input class="form__item form__subject" name="cf_subject" type="text" id="cf_subject"  class="cf_input" value="<?php if(isset($_POST['cf_subject'])) echo $_POST['cf_subject'];?>" placeholder="Subject*">
-                    </div>
-                    <textarea class="form__item form__message" name="cf_message" cols="45" rows="6" id="cf_message" value="<?php if(isset($_POST['cf_message'])) echo $_POST['cf_message'];?>" placeholder="Message*" class="cf_text"></textarea>
-                    <div class="form__row">
-                      <button class="form__item form__submit" type="submit" name="cf_submit">Send Message</button>
-                    </div>
-                </form>
-              </div>
-            </div>
-        </section> -->
-
-        <section id="contact" class="main_form">
-            <div class="container">
-              <div class="main_form_bg">
-                <div>
-                  <h1 class="form__title">Contact Us</h1>
-                </div>
-                <form action="" method="post">
-                    <div class="form__row">
-                      <input class="form__item form__name" name="cf_name" type="text" id="cf_name" class="cf_input" value="" placeholder="Name*">
-                      <input class="form__item form__email" name="cf_email" type="email" id="cf_email" class="cf_input" value="" placeholder="Email*">
-                    </div>
-                    <div class="form__row">
-                      <input class="form__item form__company" name="cf_company" type="text" id="cf_company" class="cf_input" value="" placeholder="Company*">
-                      <input class="form__item form__subject" name="cf_subject" type="text" id="cf_subject"  class="cf_input" value="" placeholder="Subject*">
-                    </div>
-                    <textarea class="form__item form__message" name="cf_message" cols="45" rows="6" id="cf_message" value="" placeholder="Message*" class="cf_text"></textarea>
-                    <div class="form__row">
-                      <button onclick="fun();" class="form__item form__submit" type="button" name="">Send Message</button>
-                    </div>
-                </form>
-              </div>
-            </div>
-        </section>
-
-        <footer class="footer">
-            <p><!-- &copy 2021 Ad-Print Ltd --> Demo Site</p>
-        </footer>
-        <script>
-            const header = document.querySelector('.header');                   // what we are watching for coming on and off viewport
-            const prod_sec = document.querySelector('.products');               //
-            const side_nav = document.querySelector('.side_nav');               //  
-            const side_label = document.querySelector('.show_side_label');      // what we want to change styling for when header is on or off screen
-
-            const navOptions = {
-                rootMargin: "-150px 0px 0px 0px"
-            };
-
-            const prodOptions = {
-                rootMargin: "150px"
-            };
-
-            const navObserver = new IntersectionObserver(function(entries,navObserver) {
-                entries.forEach(entry => {
-                    console.log(entry.target);
-                    if(!entry.isIntersecting) {
-                        side_label.classList.add("nav-scrolled");
-                        side_nav.classList.add("nav-scrolled");
-                    } else {
-                        side_label.classList.remove("nav-scrolled");
-                        side_nav.classList.remove("nav-scrolled");
-                    }
-                });
-            },
-            navOptions);
-
-            navObserver.observe(header);
-
-        </script>
-
 </body>
 </html>
