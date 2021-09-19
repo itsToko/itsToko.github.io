@@ -51,6 +51,10 @@ body {
     box-shadow: 10px 10px 5px black;
 }
 
+.col:nth-child(2) p,
+.col:nth-child(2) li {
+    font-size: 1.125rem;
+}
 
 
 /* ----- Page Styling ----- */
@@ -99,7 +103,7 @@ body {
 
 .email_btn a:hover {
     cursor: pointer;
-    background-color: var(--clr-primary-900);
+    background-color: var(--clr-primary-700);
     color: var(--clr-primary-100);
     transition: background-color 250ms, color 250ms linear 100ms;
 }
@@ -115,9 +119,6 @@ body {
 
 .col:nth-child(2) .about__title {
     padding: 1em;
-    border-radius: 15px;
-    background-color: var(--clr-primary-500);
-    box-shadow: 5px 5px 5px black;
 }
 
 .col:nth-child(2) .col__about {
@@ -131,17 +132,11 @@ body {
 .col:nth-child(2) .col__item {
     padding: 1em;
     border-radius: 15px;
-    background-color: var(--clr-primary-500);
     width: 30%;
-    box-shadow: 5px 5px 5px black;
 }
 
 .col:nth-child(2) .col__item ul {
     list-style: none;
-}
-
-.col:nth-child(2) .col__item li + li {
-    margin-top: 1em;
 }
 
 .title {
@@ -151,10 +146,6 @@ body {
 }
 
 /* ----- Psuedo element styling -----*/
-.col__item:hover {
-    transform: translate(-5px,-5px);
-    box-shadow: 10px 10px 5px black;
-}
 
 .title::after {
     content: '';
