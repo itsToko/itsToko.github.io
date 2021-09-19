@@ -51,6 +51,7 @@ body {
     box-shadow: 10px 10px 5px black;
 }
 
+.col:nth-child(1) .email_btn a,
 .col:nth-child(2) p,
 .col:nth-child(2) li {
     font-size: 1.125rem;
@@ -81,8 +82,10 @@ body {
     max-width: 150px;
 }
 
-.name .title {
-    margin-bottom: 0.15em;
+.name .title,
+.social_links .title,
+.info .title {
+    margin-bottom: 0.25em;
 }
 
 .info {
@@ -91,6 +94,9 @@ body {
     align-items: center;
 }
 
+.email_btn {
+    margin-top: 1em;
+}
 
 .email_btn a {
     background-color: var(--clr-primary-500);
