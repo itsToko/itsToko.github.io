@@ -8,6 +8,12 @@
     --clr-primary-300: hsl(163, 100%, 75%);
     --clr-primary-100: hsl(162, 100%, 95%);
 
+    --clr-primary-navy: hsl(214, 35%, 37%);
+    --clr-primary-grey_blue: hsl(202, 46%, 72%);
+    --clr-primary-lt_blue: hsl(182, 82%, 93%);
+    --clr-primary-orange: hsl(12, 83%, 62%);
+    --clr-primary-dark_grey: hsl(218, 23%, 21%);
+
     /* ----- Accent Colours -----*/
 
     /* ----- Font Styling -----*/
@@ -41,6 +47,7 @@ body {
 .row {
     display: flex;
     flex-direction: column;
+    border: 1px solid red;
 }
 
 /* ----- Typography ----- */
@@ -48,25 +55,70 @@ body {
     font-size: 2.125rem;
 }
 
-.header__text {
-    font-size: 1.3125rem;
-}
-h1,
-.hero__title {
-    font-size: 1.75rem;
-}
-
-.hero__text {
-    font-size: 1.125rem;
-}
-/* ----- End -----*/
-
 .header__title,
 .header__subtitle {
     color: var(--clr-primary-100);
     text-shadow: 2px 2px 2px black;
 }
 
+.header__text {
+    font-size: 1.3125rem;
+    text-align: center;
+    position: relative;
+    padding: 2rem;
+}
+
+.header__text::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: var(--clr-primary-700); */
+    opacity: 0.3;
+}
+
+h1,
+.hero__title {
+    font-size: 1.75rem;
+}
+
+.hero__title {
+    color: #fff;
+    text-shadow: 1px 1px 2px black;
+    position: relative;
+}
+
+.hero__title::before {
+    content: '';
+    display: block;
+    position: absolute;
+    inset: -0.5em;
+    width: calc(100% + 1em);
+    height: calc(100% + 1em);
+    background-color: var(--clr-primary-orange);
+    border-radius: 15px;
+    z-index: -1;
+}
+
+.hero__text {
+    font-size: 1.125rem;
+    margin-top: 2em;
+}
+
+.projects__title {
+    color: var(--clr-primary-dark_grey);
+    margin-bottom: 1em;
+}
+
+.footer__text {
+    font-size: 1.125rem
+}
+/* ----- End -----*/
+
+/* ----- Page Styling ----- */
 .header {
     height: 33vh;
     display: flex;
@@ -91,75 +143,59 @@ h1,
     z-index: -1;
 }
 
-.header__text {
-    text-align: center;
-    position: relative;
-    padding: 2rem;
-}
-
-.header__text::after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* background-color: var(--clr-primary-700); */
-    opacity: 0.3;
-}
-
+/* ----- Hero Section ----- */
 .hero {
+    margin: 0 auto;
     padding-block: 3rem;
-    max-width: 50rem;
+    max-width: 35rem;
 }
 
-.hero__title {
-    color: #fff;
-    text-shadow: 1px 1px 2px black;
-    position: relative;
-}
-
-.hero__title::before {
-    content: '';
-    display: block;
-    position: absolute;
-    inset: -0.5em;
-    width: calc(100% + 1em);
-    height: calc(100% + 1em);
-    background-color: var(--clr-primary-700);
-    border-radius: 15px;
-    z-index: -1;
-}
-
-.hero__text {
-    margin-top: 2em;
-}
-
-.footer__text {
-    font-size: 1.125rem
-}
-
+/* ----- Projects Section ----- */
 .projects {
     padding-block: 3rem;
-    background-color: var(--clr-primary-500);
+    background-color: var(--clr-primary-grey_blue);
 }
 
 .projects .col + .col {
     margin-top: 1.5em;
 }
 
-.projects__title {
-    margin-bottom: 1em;
-}
-
 .projects__img {
     width: 100%;
-    max-width: 100%;
+    max-width: 400px;
     border-radius: 5px;
     box-shadow: 5px 5px 1px black;
 }
 
+.projects .col img:hover {
+    cursor: pointer;
+    filter: brightness(0.7);
+
+    transform: scale(1.01);
+    -moz-transform: scale(1.01);
+    -o-transform: scale(1.101);
+    -webkit-transform: scale(1.01);
+
+    transition: transform 100ms, filter 250ms linear 50ms;
+    -moz-transition: transform 100ms, filter 250ms linear 50ms;
+    -o-transition: transform 100ms, filter 250ms linear 50ms;
+    -webkit-transition: transform 100ms, filter 250ms linear 50ms;
+}
+
+/* ----- Contact Section ----- */
+.contact {
+    background-color: var(--clr-primary-orange);
+    height: 800px;
+}
+
+.contact__form {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* ----- Footer Styling ----- */
 .footer {
     margin: 0 auto;
     padding: 3rem;
@@ -168,7 +204,7 @@ h1,
     top: 100%;
     width: 100%;
     left: 0;
-    background-color: var(--clr-primary-700)
+    background-color: var(--clr-primary-dark_grey)
 }
 
 .footer__text {
@@ -177,13 +213,15 @@ h1,
     text-shadow: 1px 1px 2px black;
 }
 
-
+/* ----- Different screen size styling ----- */
 @media (min-width: 960px) {
+    /* ----- Utility Classes ----- */
     .row {
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
 
+    /* ----- Typography Styling ----- */
     .header__title {
         font-size: 70px;
     }
@@ -196,10 +234,12 @@ h1,
         font-size: 21px;
     }
 
+    /* ----- Page Styling ----- */
     .header {
         min-height: 100vh;
     }
 
+    /* ----- Hero Section ----- */
     .hero {
         margin: 0 auto;
         min-height: 75vh;
@@ -208,7 +248,7 @@ h1,
         align-items: center;
     }
 
-
+    /* ----- Projects Section ----- */
     .projects {
         display: flex;
         justify-content: center;
@@ -217,26 +257,25 @@ h1,
     }
 
     .projects .col {
-        width: 45%;
+        border: 1px solid red;
+        width: 100%;
+        text-align: center;
     }
 
     .projects .col + .col {
         margin-top: 0;
     }
 
-    .projects .col img:hover {
-        cursor: pointer;
-        filter: brightness(0.7);
-
-        transform: scale(1.01);
-        -moz-transform: scale(1.01);
-        -o-transform: scale(1.101);
-        -webkit-transform: scale(1.01);
-
-        transition: transform 100ms, filter 250ms linear 50ms;
-        -moz-transition: transform 100ms, filter 250ms linear 50ms;
-        -o-transition: transform 100ms, filter 250ms linear 50ms;
-        -webkit-transition: transform 100ms, filter 250ms linear 50ms;
+    .contact {
+        min-height: 75vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
+    .contact__form {
+        margin: 0 auto;
+        width: 100%;
+        height: 709px;
+    }
 }
