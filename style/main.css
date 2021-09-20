@@ -146,7 +146,7 @@ h1,
 .hero {
     margin: 0 auto;
     padding-block: 3rem;
-    max-width: 35rem;
+    max-width: 50rem;
 }
 
 /* ----- Projects Section ----- */
@@ -161,7 +161,7 @@ h1,
 
 .projects__img {
     width: 100%;
-    max-width: 400px;
+    max-width: 600px;
     border-radius: 5px;
     box-shadow: 5px 5px 1px black;
 }
@@ -184,13 +184,17 @@ h1,
 /* ----- Contact Section ----- */
 .contact {
     background-color: var(--clr-primary-orange);
-    height: 800px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .contact__form {
     text-align: center;
     margin: 0 auto;
     width: 100%;
+    height: 815px;
     overflow: hidden;
 }
 
@@ -217,7 +221,7 @@ h1,
     /* ----- Utility Classes ----- */
     .row {
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: space-between;;
     }
 
     /* ----- Typography Styling ----- */
@@ -256,8 +260,7 @@ h1,
     }
 
     .projects .col {
-        border: 1px solid red;
-        width: 100%;
+        width: 50%;
         text-align: center;
     }
 
@@ -266,15 +269,12 @@ h1,
     }
 
     .contact {
-        min-height: 75vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        padding: 3em;
     }
 
     .contact__form {
         margin: 0 auto;
         width: 100%;
-        height: 709px;
+        height: 760px;
     }
 }
