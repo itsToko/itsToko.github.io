@@ -31,6 +31,7 @@
 html {
     font-size: 16px;
     scroll-behavior: smooth;
+    scroll-margin: 50px;
 }
 
 body {
@@ -79,6 +80,10 @@ body {
     opacity: 0.3;
 }
 
+.nav__list__item a {
+    font-size: 1rem;
+}
+
 h1,
 .hero__title {
     font-size: 1.75rem;
@@ -103,8 +108,13 @@ h1,
 }
 
 .hero__text {
-    font-size: 1.125rem;
+    font-size: 1.1875rem;
     margin-top: 2em;
+}
+
+.hero__text__requirements {
+    font-size: 1.125rem;
+    margin-top: 0.5em;
 }
 
 .projects__title {
@@ -133,6 +143,20 @@ h1,
     justify-content: center;
     align-items: center;
     position: relative;
+    z-index: 1;
+}
+
+.header::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.85;
+    z-index: -1;
 }
 
 .header::after {
@@ -147,8 +171,78 @@ h1,
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    filter: brightness(0.25);
-    z-index: -1;
+    z-index: -2;
+}
+
+.nav {
+    background-color: var(--clr-primary-navy);
+    position: fixed;
+    top: 0;
+    left: -100%;
+    padding: 1.5em;
+    border-bottom-right-radius: 15px;
+    display: block;
+    transition: left 300ms ease-in-out 100ms;
+}
+
+.nav__list {
+    list-style: none;
+    display: flex;
+}
+
+.nav__list__item + .nav__list__item {
+    margin-left: 1em;
+}
+
+.nav__list__item a {
+    color: #fff;
+    text-shadow: 1px 1px 2px black;
+    text-decoration: none;
+}
+
+.hide {
+    display: none;
+}
+
+#nav-toggle:checked ~ .nav {
+    left: 0;
+}
+
+.nav-toggle__label {
+    color: #fff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 2em 1.3em;
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle__label span,
+.nav-toggle__label span::before,
+.nav-toggle__label span::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--clr-primary-navy);
+}
+
+.nav-toggle__label span {
+    position: relative;
+}
+
+.nav-toggle__label span::before,
+.nav-toggle__label span::after {
+    position: absolute;
+}
+
+.nav-toggle__label span::before {
+    top: -8px;
+}
+
+.nav-toggle__label span::after {
+    bottom: -8px;
 }
 
 /* ----- Hero Section ----- */
@@ -163,6 +257,10 @@ h1,
     margin: 0 auto;
     padding-block: 3rem;
     max-width: 25rem;
+}
+
+.hero__requirements__list {
+    margin-left: 2em;
 }
 
 /* ----- Projects Section ----- */
@@ -235,6 +333,27 @@ h1,
 }
 
 /* ----- Different screen size styling ----- */
+@media only screen and (min-width: 760px) {
+    .header__title {
+        font-size: 52px;
+        transition: font-size 0.3s linear;
+    }
+
+    .hero__text,
+    .nav__list__item a {
+        font-size: 21px;
+    }
+
+    .hero__text__requirements,
+    .hero__list__text {
+        font-size: 19px;
+    }
+
+    .nav__list__item + .nav__list__item {
+        margin-left: 2em;
+    }
+}
+
 @media only screen and (min-width: 960px) {
     /* ----- Utility Classes ----- */
     .row {
@@ -253,12 +372,19 @@ h1,
     }
 
     .hero__text {
+        font-size: 24px;
+    }
+
+    .hero__text__requirements,
+    .hero__list__text {
         font-size: 21px;
     }
 
     .header__title,
     .hero__title,
     .hero__text,
+    .hero__text__requirements,
+    .hero__requirements__list,
     .projects__title,
     .footer__text {
             transition: font-size 0.3s linear;
@@ -295,5 +421,109 @@ h1,
 
     .projects__practice {
         margin-top: 3em;
+    }
+}
+
+        /*  =============
+            2k resolution
+            =============  */
+@media only screen and (min-width:2560px) {
+    /* ----- Typography Styling ----- */
+    .header__title {
+        font-size: 150px;
+    }
+
+    .header__subtitle {
+        font-size: 38px;
+    }
+
+    .hero__title,
+    .projects__title {
+        font-size: 70px;
+    }
+
+    .hero__text {
+        font-size: 38px;
+    }
+
+    .hero__text__requirements,
+    .hero__list__text {
+        font-size: 34px;
+    }
+
+    .header__title,
+    .hero__title,
+    .hero__text,
+    .hero__text__requirements,
+    .hero__requirements__list,
+    .projects__title,
+    .footer__text {
+            transition: font-size 0.3s linear;
+    }
+
+    /* ----- Page styling ----- */
+    .container {
+        max-width: 2000px;
+    }
+
+    .hero__card {
+        max-width: 1280px;
+    }
+
+    .nav-toggle__label {
+        padding: 4em 3em;
+    }
+
+    .nav-toggle__label span,
+    .nav-toggle__label span::before,
+    .nav-toggle__label span::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 5px;
+        background-color: var(--clr-primary-navy);
+    }
+
+    .nav-toggle__label span::before {
+        top: -16px;
+    }
+
+    .nav-toggle__label span::after {
+        bottom: -16px;
+    }
+}
+
+@media only screen and (min-width:3840px) {
+    /* ----- Typography Styling ----- */
+    .header__title {
+        font-size: 150px;
+    }
+
+    .header__subtitle {
+        font-size: 50px;
+    }
+
+    .hero__title,
+    .projects__title {
+        font-size: 70px;
+    }
+
+    .hero__text {
+        font-size: 24px;
+    }
+
+    .hero__text__requirements,
+    .hero__list__text {
+        font-size: 21px;
+    }
+
+    .header__title,
+    .hero__title,
+    .hero__text,
+    .hero__text__requirements,
+    .hero__requirements__list,
+    .projects__title,
+    .footer__text {
+            transition: font-size 0.3s linear;
     }
 }
