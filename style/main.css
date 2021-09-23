@@ -175,14 +175,15 @@ h1,
 }
 
 .nav {
-    background-color: var(--clr-primary-navy);
+    background-color: var(--clr-primary-dark_grey);
     position: fixed;
+    height: calc(padding + 5px);
     top: 0;
     left: -100%;
     padding: 1.5em;
     border-bottom-right-radius: 15px;
     display: block;
-    transition: left 300ms ease-in-out 100ms;
+    transition: left 750ms ease-in-out 100ms;
 }
 
 .nav__list {
@@ -200,6 +201,13 @@ h1,
     text-decoration: none;
 }
 
+.nav__list__item a:hover,   
+.nav__list__item a:focus,
+.nav__list__item a:active {
+    color: var(--clr-primary-orange);
+    transition: color 250ms linear 50ms;
+}
+
 .hide {
     display: none;
 }
@@ -211,11 +219,14 @@ h1,
 .nav-toggle__label {
     color: #fff;
     position: fixed;
-    top: 0;
-    right: 0;
-    padding: 2em 1.3em;
+    top: 5px;
+    right: 15px;
+    padding: 1.6em 1em;
     display: flex;
     align-items: center;
+    background-color: var(--clr-primary-dark_grey);
+    border-radius: 15px;
+    transform: scale(1);
 }
 
 .nav-toggle__label span,
@@ -225,7 +236,8 @@ h1,
     display: block;
     width: 24px;
     height: 2px;
-    background-color: var(--clr-primary-navy);
+    background-color: var(--clr-primary-100);
+    border-radius: 3px;
 }
 
 .nav-toggle__label span {
@@ -243,6 +255,16 @@ h1,
 
 .nav-toggle__label span::after {
     bottom: -8px;
+}
+
+.nav-toggle__label:hover {
+    cursor: pointer;
+}
+
+.nav-toggle__label:active {
+    background-color: var(--clr-primary-orange);
+    transform: scale(0.95);
+    transition: transform 100ms linear;
 }
 
 /* ----- Hero Section ----- */
@@ -303,6 +325,7 @@ h1,
 .contact {
     padding: 3em;
     background-color: var(--clr-primary-orange);
+    width: 100%;
     min-height: 100vh;
     display: flex;
     align-items: center;
