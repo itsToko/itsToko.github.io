@@ -1,0 +1,31 @@
+@import url('https://fonts.google.com/specimen/Spartan');
+
+:root {
+    /* Clr Primaries*/
+    --clr-primary-20:hsl(300, 43%, 22%);
+    --clr-primary-60:hsl(333, 80%, 67%);
+
+    /* Clr Neutrals*/
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-90: hsl(300, 24%, 96%);
+    --clr-neutral-50: hsl(303, 10%, 53%);
+
+    /* Fonts */
+    --ff-primary: "Spartan", sans-serif;
+    --fw-primary-400: 400;
+    --fw-primary-500: 500;
+    --fw-primary-700: 700;
+    --fs-primary: 15px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: var(--fs-primary);
+}

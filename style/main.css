@@ -295,30 +295,38 @@ h1,
     align-items: center;  
 }
 
-.projects .col + .col {
-    margin-top: 1.5em;
+.projects__live {
+    margin-bottom: 2em;
 }
 
-.projects__img {
+.projects__live .projects__title {
+    margin-bottom: 0;
+}
+
+.projects__grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    height: 100%;
+}
+
+.projects__grid__item {
     width: 100%;
-    max-width: 600px;
-    border-radius: 5px;
-    box-shadow: 5px 5px 1px black;
+    max-width: 400px;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.projects img:hover {
-    cursor: pointer;
-    filter: brightness(0.7);
+.projects__grid__item:nth-child(odd) {
+    background-color: hsl(213, 64%, 59%);
+}
 
-    transform: scale(1.01);
-    -moz-transform: scale(1.01);
-    -o-transform: scale(1.101);
-    -webkit-transform: scale(1.01);
-
-    transition: transform 100ms, filter 250ms linear 50ms;
-    -moz-transition: transform 100ms, filter 250ms linear 50ms;
-    -o-transition: transform 100ms, filter 250ms linear 50ms;
-    -webkit-transition: transform 100ms, filter 250ms linear 50ms;
+.projects__grid__item:nth-child(even) {
+    background-color: hsl(12, 83%, 62%);
 }
 
 /* ----- Contact Section ----- */
@@ -374,6 +382,10 @@ h1,
 
     .nav__list__item + .nav__list__item {
         margin-left: 2em;
+    }
+
+    .projects__grid__item {
+        width: 45%;
     }
 }
 
@@ -444,6 +456,10 @@ h1,
 
     .projects__practice {
         margin-top: 3em;
+    }
+
+    .projects__grid__item {
+        width: 100%;
     }
 }
 
