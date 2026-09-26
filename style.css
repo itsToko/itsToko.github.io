@@ -1,0 +1,96 @@
+:root {
+    @font-face {
+        font-family: Outfit;
+        src: url(https://fonts.google.com/specimen/Outfit);
+    }
+    --ff-primary: "Outfit", sans-serif  ;
+    --fs-main: 15px;
+
+    /* Colours */
+    --color-slate-300: hsl(212 45% 89%);
+    --color-slate-500: hsl(216 15% 48%);
+    --color-slate-900: hsl(218 44% 22%);
+
+    /* Font Weights */
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+    --font-weight-black: 900;
+}
+
+@media only screen and (max-width: 375px) {
+    html {
+        background: var(--color-slate-300);
+    }
+}
+
+@media only screen and (min-width: 376px) {
+    html {
+        background: var(--color-slate-300);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    } 
+    
+    body {
+        max-width: 375px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    html {
+        background: var(--color-slate-300);
+    }    
+
+    body {
+        max-width: 375px;
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+    margin: 0;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.danTest {
+    border-radius: 20px;
+    width: 85%;
+    text-align: center;
+    font-family: Outfit;
+    background-color: white;
+}
+
+.img-qr {
+    max-width: 90%;
+    margin-top: 5%;
+    border-radius: 5%;
+}
+
+.head {
+    font-weight: var(--font-weight-bold);
+    padding-left: 10%;
+    padding-right: 10%;
+    
+}
+
+.para {
+    font-size: var(--fs-main);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-slate-500);
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 10%;
+}
