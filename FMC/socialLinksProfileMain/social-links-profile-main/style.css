@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    /*Font styling*/
+        /*Family*/
+            --ff-pri: "Inter", sans-serif;
+        /*Sizes*/
+            --fs-para: 14px;
+
+        /*Weights*/
+            --fw-4: 400;
+            --fw-6: 600;
+            --fw-7: 700;
+
+    /*Colours*/
+        --clr-grn: hsl(75,94%,57%);
+        --clr-wht: hsl(0,0%,100%);
+        --clr-gry-7: hsl(0,0%,20%);
+        --clr-gry-8: hsl(0,0%,12%);
+        --clr-gry-9: hsl(0,0%,8%);
+    
+}
+
+/* --- Styling for different sized screens --- */
+
+@media only screen and (max-width: 375px) {
+    #mainPanel {
+       width: 90%;
+    }
+
+    #uInfo {
+        padding: 0;
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+
+}
+
+@media only screen and (min-width: 376px)  and (max-width: 1079px) {
+    #mainPanel {
+        background-color: var(--clr-gry-8);
+        border-radius: 15px;
+        height: auto;
+        width: 90%;
+    }
+
+    #uInfo {
+        padding: 10%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media only screen and (min-width: 1080px) {
+    #mainPanel {
+        background-color: var(--clr-gry-8);
+        border-radius: 15px;
+        width: 400px;
+        height: auto;
+    }
+
+    #uInfo {
+        padding: 10%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+/* --- Main page styling --- */
+
+html {
+    padding: 0;
+    margin: 0;
+    background-color: var(--clr-gry-9);
+    height: 100vh;
+    font-family: var(--ff-pri);
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100vw;
+
+}
+
+/* --- Panel styling --- */
+
+#mainPanel {
+    background-color: var(--clr-gry-8);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    max-width: 400px;
+}
+
+/* --- User information styling --- */
+
+#uInfo {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+}
+
+.pPic {
+    border-radius: 50%;
+    width: 80px;
+}
+
+#nameLoca {
+    text-align: center;
+}
+
+.name {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.loca {
+    margin-top: 10px;
+    color: var(--clr-grn);
+    font-weight: var(--fw-6);
+    font-size: var(--fs-para);
+}
+
+.desc {
+    font-size: var(--fs-para);
+    text-align: center;
+}
+
+.name, .desc, .link {
+    color: var(--clr-wht);
+}
+
+/* --- Social links styling --- */
+
+#uLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.link {
+    background-color: var(--clr-gry-7);
+    border-radius: 10px;
+    font-family: var(--ff-pri);
+    font-weight: var(--fw-7);
+    text-align: center;
+    padding: 15px;
+    margin-top: 15px;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.link:hover {
+    background-color: var(--clr-grn);
+    color: var(--clr-gry-9);
+    transition: all .6 s ease;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* --- Footer styling --- */
+
+.attribution {
+    position: fixed;
+    bottom: 0;
+    color: var(--clr-wht);
+}
+
+.attribution a {
+    color: var(--clr-grn);
+}
+
+.attribution a:hover {
+    color: var(--clr-wht);
+}

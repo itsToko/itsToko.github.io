@@ -1,0 +1,81 @@
+:root {
+    /*Font styling*/
+        /*Family*/
+            --ff-pri: "Inter", sans-serif;
+        /*Sizes*/
+            --fs-para: 14px;
+
+        /*Weights*/
+            --fw-4: 400;
+            --fw-6: 600;
+            --fw-7: 700;
+
+    /*Colours*/
+        --clr-grn: hsl(75,94%,57%);
+        --clr-wht: hsl(0,0%,100%);
+        --clr-gry-7: hsl(0,0%,20%);
+        --clr-gry-8: hsl(0,0%,12%);
+        --clr-gry-9: hsl(0,0%,8%);
+    
+}
+
+@media screen and (max-width: 375px) {
+    
+}
+
+@media screen and (min-width: 376px) and (max-width: 768px) {
+
+}
+
+@media screen and (min-width: 769px) {
+
+}
+
+html {
+    background-color: var(--clr-gry-9);
+    color: var(--clr-wht);
+}
+body {
+    height: 100vh;
+}
+
+section {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#lPanel {
+    padding: 25px;
+    padding-left: 0;
+    padding-right: 0;
+    width: 500px;
+    height: auto;
+    background-color: var(--clr-gry-7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+
+#dName {
+    margin-bottom: 100px;
+}
+
+a {
+    font-size: 25px;
+    color: var(--clr-wht);
+    text-decoration: none;
+    margin-top: 12px;
+}
+
+#qr {
+    margin: 0; 
+}
+
+a:hover {
+    color: var(--clr-grn);
+    transition: all .5s ease;
+}
