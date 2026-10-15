@@ -72,17 +72,20 @@ html {
     padding: 0;
     margin: 0;
     background-color: var(--clr-gry-9);
-    height: 100vh;
     font-family: var(--ff-pri);
 }
 
 body {
     margin: 0;
+    box-sizing: border-box;
+    padding: 1.5rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    gap: 1.5rem;
+
+    min-height: 100vh;
     width: 100vw;
 
 }
@@ -120,6 +123,7 @@ body {
 .name {
     margin-top: 20px;
     margin-bottom: 0;
+    font-size: 1.5rem;
 }
 
 .loca {
@@ -160,10 +164,10 @@ body {
     padding-right: 0;
 }
 
-.link:hover {
+.link:hover, .link:focus-visible {
     background-color: var(--clr-grn);
     color: var(--clr-gry-9);
-    transition: all .6 s ease;
+    transition: all .6s ease;
 }
 
 a {
@@ -173,9 +177,10 @@ a {
 /* --- Footer styling --- */
 
 .attribution {
-    position: fixed;
+    text-align: center;
     bottom: 0;
     color: var(--clr-wht);
+    padding: 0 1.5rem;
 }
 
 .attribution a {
