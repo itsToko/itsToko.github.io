@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Red+Hat+Display">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Order summary card</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+  </style>
+</head>
+<body> <!-- Background - height and width of device screen size -->
+    <main id="mPanel"> <!-- Main panel div -->
+      <img id="banner" src="./images/illustration-hero.svg" alt=""> <!-- Panel banner image -->
+      <div id="pHead" class="col">
+        <h1 id="title">Order Summary</h1><!-- Title - Order summary -->
+        
+        <p id="para"> <!-- Paragraph -->
+          You can now listen to millions of songs, audiobooks, and podcasts on any 
+          device anywhere you like!
+        </p>
+      </div>
+
+        <div id="plan"> <!-- Plan -->
+          <div id="pWrapper">
+            <img src="./images/icon-music.svg" alt="">
+            <div id="pPrice">
+              <p id="pType">Annual Plan</p>
+              <p id="pCost">$59.99/year</p>
+            </div>
+            <a id="btnChange" href="#">Change</a>
+          </div>
+        </div>
+
+      <!-- Buttons -->
+       <div class="col buttons">
+        <a class="btn" id="btnPay" href="#"> <!-- Payment button -->
+          Proceed to Payment
+        </a>
+        <a class="btn" id="btnCan" href="#"> <!-- Cancel button -->
+          Cancel Order
+        </a>
+       </div>
+
+      
+    </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="https://itstoko.github.io/">Daniel Husbands</a>.
+  </footer>
+</body>
+</html>
